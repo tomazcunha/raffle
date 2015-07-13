@@ -17,10 +17,10 @@ class TestRaffle(TestCase):
         self.assertIn(u'c', instance.items)
         self.assertEqual(3, len(instance.items))
 
-    def test_getitem_push_item_from_list(self):
+    def test_next_push_item_from_list(self):
         raffled_item = next(self.instance)
         self.assertNotIn(raffled_item, self.instance.items)
 
-    def test_getitem_raises_error_if_raffle_has_no_more_items(self):
+    def test_next_raises_error_if_raffle_has_no_more_items(self):
         instance = self.model([])
         self.assertRaises(StopIteration, next, instance)

@@ -2,7 +2,7 @@
 import random
 
 
-class Raffle(object):
+class Raffle:
 
     def __init__(self, items):
         self.items = items
